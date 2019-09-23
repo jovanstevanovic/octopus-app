@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/id_belgrade"
+        android:title="@string/belgrade" />
+
+    <item
+        android:id="@+id/id_nis"
+        android:title="@string/nis"/>
+
+    <item
+        android:id="@+id/id_novi_sad"
+        android:title="@string/novi_sad"/>
+
+    <item
+        android:id="@+id/id_kragujevac"
+        android:title="@string/kragujevac"/>
+
+    <item
+        android:id="@+id/id_kosovska_mitrovica"
+        android:title="@string/kosovska_mitrovica"/>
+
+</menu>

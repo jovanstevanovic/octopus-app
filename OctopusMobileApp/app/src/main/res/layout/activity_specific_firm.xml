@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SpecificFirmActivity"
+    android:background="@drawable/background_main_image">
+
+    <LinearLayout
+        android:id="@+id/side_nav_bar_main_panel_view"
+        android:layout_width="220dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/background_main_image"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:translationZ="1dp"
+        android:layout_alignParentLeft="true"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/contact_us_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:text="@string/contact_us"
+            android:textColor="#06FF12"
+            android:textSize="32sp"
+            app:fontFamily="@font/dancing_script" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/contact_us_icon"
+            android:drawableLeft="@drawable/contact_us_icon"
+            android:drawablePadding="5dp"
+            app:fontFamily="@font/dancing_script"
+            android:textSize="22sp"
+            android:textAllCaps="false"
+            android:text="@string/call" />
+
+        <TextView
+            android:id="@+id/change_language_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/language"
+            android:textColor="#06FF12"
+            android:textSize="32sp"
+            app:fontFamily="@font/dancing_script"
+            android:paddingTop="10dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/language_icon"
+            android:drawableLeft="@drawable/language_icon"
+            android:drawablePadding="15dp"
+            android:text="@string/serbian"
+            android:textAllCaps="false"
+            android:textSize="22sp"
+            android:textColor="@android:color/white"
+            app:fontFamily="@font/dancing_script"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/language_icon"
+            android:drawableLeft="@drawable/language_icon"
+            android:drawablePadding="15dp"
+            android:text="@string/english"
+            android:textSize="22sp"
+            android:textAllCaps="false"
+            app:fontFamily="@font/dancing_script"/>
+
+        <Button
+            android:id="@+id/previous_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="35dp"
+            android:gravity="center"
+            android:drawableLeft="@drawable/swipe_back_arrow_icon"
+            android:drawableStart="@drawable/swipe_back_arrow_icon"
+            android:drawablePadding="15dp"
+            android:background="@android:color/transparent"
+            style="@style/HugeText.Button"
+            app:fontFamily="@font/dancing_script"
+            android:paddingTop="35dp"
+            android:text="@string/back"
+            android:onClick="OnClickDismissSideBar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/header_product_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="20dp">
+
+        <ImageButton
+            android:id="@+id/side_nav_bar_product_panel_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:onClick="OnClickHeaderButton"
+            android:background="@android:color/transparent"
+            android:src="@drawable/side_nav_bar_icon"
+            android:contentDescription="@string/side_nav_bar_icon" />
+
+        <TextView
+            android:id="@+id/octopus_header_text_view"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="@string/octopus"
+            android:gravity="center"
+            android:textSize="32sp"
+            android:textColor="#06FF12"
+            app:fontFamily="@font/dancing_script" />
+
+        <ImageButton
+            android:id="@+id/cart_product_panel_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:onClick="OnClickHeaderButton"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_shopping_cart_black_24dp"
+            android:contentDescription="@string/shopping_cart_icon" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/firm_icon_main"
+        android:layout_width="100dp"
+        android:scaleType="fitXY"
+        android:layout_height="100dp"
+        android:contentDescription="@string/firm_icon"
+        android:layout_below="@id/header_product_panel"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp" />
+
+    <TextView
+        android:id="@+id/firm_name_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/firm_name"
+        android:textSize="24sp"
+        android:textColor="#06FF12"
+        app:fontFamily="@font/dancing_script"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/firm_icon_main"
+        android:layout_toLeftOf="@+id/firm_price_main"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@id/firm_icon_main"
+        android:layout_toStartOf="@+id/firm_price_main"
+        android:layout_below="@id/header_product_panel"/>
+
+    <TextView
+        android:id="@+id/firm_price_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rank"
+        android:textSize="22sp"
+        android:textColor="@android:color/white"
+        app:fontFamily="@font/dancing_script"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/header_product_panel"
+        android:layout_marginEnd="10dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/firm_name_main"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_toEndOf="@id/firm_name_main"
+        android:layout_toRightOf="@id/firm_name_main"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/rank_star"
+        android:layout_marginStart="10dp"
+        android:contentDescription="@string/star_icon" />
+
+    <TextView
+        android:id="@+id/firm_description_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/description"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        app:fontFamily="@font/dancing_script"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@id/firm_name_main"
+        android:layout_toRightOf="@id/firm_icon_main"
+        android:layout_toEndOf="@id/firm_icon_main"
+        android:layout_marginStart="5dp" />
+
+    <TextView
+        android:id="@+id/work_time_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/work_time"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        app:fontFamily="@font/dancing_script"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@id/firm_description_main"
+        android:layout_toRightOf="@id/firm_icon_main"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@id/firm_icon_main" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/work_time_icon"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_toRightOf="@id/work_time_main"
+        android:layout_below="@id/firm_description_main"
+        android:contentDescription="@string/time_icon"
+        android:layout_toEndOf="@id/work_time_main" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_below="@id/firm_icon_main"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"/>
+
+    <TextView
+        android:id="@+id/no_product_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header_product_panel"
+        android:layout_centerInParent="true"
+        android:text="@string/no_products_to_be_displayed"
+        android:textSize="32sp"
+        app:fontFamily="@font/dancing_script"
+        android:textAlignment="center"
+        android:visibility="gone"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/product_list_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider"
+        android:layout_margin="10dp"/>
+
+</RelativeLayout>

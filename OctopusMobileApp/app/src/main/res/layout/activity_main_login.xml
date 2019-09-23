@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/root_view_login"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_main_image">
+
+    <TextView
+        android:id="@+id/main_activity_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="50dp"
+        android:text="@string/login_register"
+        app:fontFamily="@font/dancing_script"
+        style="@style/HugeText"
+        android:textColor="@android:color/white"/>
+
+    <LinearLayout
+        android:id="@+id/main_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/usernameEditText"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edit_text"
+            android:hint="@string/username"
+            android:drawableLeft="@drawable/username_icon"
+            android:drawableStart="@drawable/username_icon"
+            android:drawablePadding="10dp"
+            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
+            android:layout_margin="15dp"
+            android:textColor="@android:color/white"
+            android:textSize="32sp"
+            app:fontFamily="@font/dancing_script"/>
+
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edit_text"
+            android:hint="@string/password"
+            android:drawableLeft="@drawable/password_icon"
+            android:drawableStart="@drawable/password_icon"
+            android:drawablePadding="10dp"
+            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
+            android:layout_margin="15dp"
+            android:textColor="@android:color/white"
+            android:textSize="32sp"
+            app:fontFamily="@font/dancing_script"
+            android:inputType="textPassword"/>
+
+        <EditText
+            android:id="@+id/confirm_password"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edit_text"
+            android:hint="@string/confirm_password"
+            android:drawableLeft="@drawable/password_confirmed_icon"
+            android:drawableStart="@drawable/password_confirmed_icon"
+            android:drawablePadding="10dp"
+            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
+            android:layout_margin="15dp"
+            android:textColor="@android:color/white"
+            android:textSize="32sp"
+            app:fontFamily="@font/dancing_script"
+            android:inputType="textPassword"
+            android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/mail"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edit_text"
+            android:hint="Your mail"
+            android:drawableLeft="@drawable/mail_icon"
+            android:drawableStart="@drawable/mail_icon"
+            android:drawablePadding="10dp"
+            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
+            android:layout_margin="15dp"
+            android:textColor="@android:color/white"
+            android:textSize="32sp"
+            app:fontFamily="@font/dancing_script"
+            android:inputType="textPassword"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/confirm_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="32sp"
+            app:fontFamily="@font/dancing_script"
+            android:text="@string/confirm"
+            android:drawableRight="@drawable/running_man"
+            android:drawablePadding="15dp"
+            android:drawableEnd="@drawable/confirm_icon"
+            android:onClick="onClickConfirmButton"/>
+
+        <Button
+            android:id="@+id/registration_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_account_register_now"
+            app:fontFamily="@font/dancing_script"
+            android:textSize="32sp"
+            android:background="@android:color/transparent"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:onClick="onClickRegisterButton"
+            android:paddingTop="25dp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/previous_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingBottom="35dp"
+        android:gravity="center"
+        android:drawableLeft="@drawable/swipe_back_arrow_icon"
+        android:drawableStart="@drawable/swipe_back_arrow_icon"
+        android:drawablePadding="15dp"
+        android:background="@android:color/transparent"
+        style="@style/HugeText.Button"
+        app:fontFamily="@font/dancing_script"
+        android:text="@string/swipe_back"
+        android:onClick="OnClickBackButton"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

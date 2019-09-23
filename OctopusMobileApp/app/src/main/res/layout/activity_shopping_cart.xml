@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ShoppingCartActivity"
+    android:background="@drawable/background_main_image">
+
+    <LinearLayout
+        android:id="@+id/side_nav_bar_main_panel_view"
+        android:layout_width="220dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/background_main_image"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:translationZ="1dp"
+        android:layout_alignParentLeft="true"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/contact_us_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:text="@string/contact_us"
+            android:textColor="#06FF12"
+            android:textSize="32sp"
+            app:fontFamily="@font/dancing_script" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/contact_us_icon"
+            android:drawableLeft="@drawable/contact_us_icon"
+            android:drawablePadding="5dp"
+            app:fontFamily="@font/dancing_script"
+            android:textSize="22sp"
+            android:textAllCaps="false"
+            android:text="@string/call" />
+
+        <TextView
+            android:id="@+id/change_language_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/language"
+            android:textColor="#06FF12"
+            android:textSize="32sp"
+            app:fontFamily="@font/dancing_script"
+            android:paddingTop="10dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/language_icon"
+            android:drawableLeft="@drawable/language_icon"
+            android:drawablePadding="15dp"
+            android:text="@string/serbian"
+            android:textAllCaps="false"
+            android:textSize="22sp"
+            android:textColor="@android:color/white"
+            app:fontFamily="@font/dancing_script"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/language_icon"
+            android:drawableLeft="@drawable/language_icon"
+            android:drawablePadding="15dp"
+            android:text="@string/english"
+            android:textSize="22sp"
+            android:textAllCaps="false"
+            app:fontFamily="@font/dancing_script"/>
+
+        <Button
+            android:id="@+id/previous_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="35dp"
+            android:gravity="center"
+            android:drawableLeft="@drawable/swipe_back_arrow_icon"
+            android:drawableStart="@drawable/swipe_back_arrow_icon"
+            android:drawablePadding="15dp"
+            android:background="@android:color/transparent"
+            style="@style/HugeText.Button"
+            app:fontFamily="@font/dancing_script"
+            android:paddingTop="35dp"
+            android:text="@string/back"
+            android:onClick="OnClickDismissSideBar" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/header_product_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/side_nav_bar_product_panel_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:onClick="OnClickHeaderButton"
+            android:background="@android:color/transparent"
+            android:src="@drawable/side_nav_bar_icon"
+            android:contentDescription="@string/side_nav_bar_icon" />
+
+        <TextView
+            android:id="@+id/octopus_header_text_view"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="@string/octopus"
+            android:gravity="center"
+            android:textSize="32sp"
+            android:textColor="#06FF12"
+            app:fontFamily="@font/dancing_script" />
+
+        <ImageButton
+            android:id="@+id/cart_product_panel_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:onClick="OnClickHeaderButton"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_shopping_cart_black_24dp"
+            android:contentDescription="@string/shopping_cart_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cart_main_linear_layout"
+        android:paddingTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/header_product_panel"/>
+
+</RelativeLayout>

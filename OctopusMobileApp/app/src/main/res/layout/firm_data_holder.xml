@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:onClick="onClickSpecificFirm"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/firm_icon"
+        android:layout_width="100dp"
+        android:scaleType="fitXY"
+        android:layout_height="100dp"
+        android:contentDescription="@string/firm_icon" />
+
+    <TextView
+        android:id="@+id/firm_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/firm_name"
+        android:textSize="24sp"
+        android:textColor="#06FF12"
+        app:fontFamily="@font/dancing_script"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/firm_icon"
+        android:layout_toLeftOf="@+id/firm_price"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@id/firm_icon"
+        android:layout_toStartOf="@+id/firm_price" />
+
+    <TextView
+        android:id="@+id/firm_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rank"
+        android:textSize="22sp"
+        android:textColor="@android:color/white"
+        app:fontFamily="@font/dancing_script"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/firm_name"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_toEndOf="@id/firm_name"
+        android:layout_toRightOf="@id/firm_name"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/rank_star"
+        android:layout_marginStart="5dp"
+        android:contentDescription="@string/star_icon" />
+
+    <TextView
+        android:id="@+id/firm_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/description"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        app:fontFamily="@font/dancing_script"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@id/firm_name"
+        android:layout_toRightOf="@id/firm_icon"
+        android:layout_toEndOf="@id/firm_icon"
+        android:layout_marginStart="5dp" />
+
+    <TextView
+        android:id="@+id/work_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/work_time"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        app:fontFamily="@font/dancing_script"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@id/firm_description"
+        android:layout_toRightOf="@id/firm_icon"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@id/firm_icon" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/work_time"
+        android:src="@drawable/work_time_icon"
+        android:layout_toEndOf="@id/work_time"
+        android:layout_above="@id/divider"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:contentDescription="@string/time_icon" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_below="@id/work_time"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+</RelativeLayout>

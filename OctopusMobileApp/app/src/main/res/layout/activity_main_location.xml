@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/root_view_location"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_main_image">
+
+    <TextView
+        android:id="@+id/main_activity_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="50dp"
+        android:text="@string/choose_your_location"
+        app:fontFamily="@font/dancing_script"
+        style="@style/HugeText" />
+
+    <LinearLayout
+        android:id="@+id/main_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/your_current_gps_location"
+            android:layout_width="320dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/current_location_not_selected_icon"
+            android:drawableStart="@drawable/current_location_not_selected_icon"
+            android:background="@android:color/transparent"
+            android:text="@string/your_current_gps_location"
+            style="@style/HugeText.Button"
+            app:fontFamily="@font/dancing_script"
+            android:onClick="OnClickYourCurrentGPSLocation"/>
+
+        <Button
+            android:id="@+id/choose_different_city"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:drawableLeft="@drawable/location_city"
+            android:drawableStart="@drawable/location_city"
+            android:background="@android:color/transparent"
+            android:text="@string/different_city_location"
+            style="@style/HugeText.Button"
+            app:fontFamily="@font/dancing_script"
+            android:onClick="OnClickChooseDifferentCityLocation"/>
+
+        <TextView
+            android:id="@+id/selected_location_name"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            style="@style/HugeText.Button"
+            android:textColor="@android:color/darker_gray"
+            app:fontFamily="@font/dancing_script"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/next_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:paddingBottom="35dp"
+        android:gravity="center"
+        android:drawableRight="@drawable/next_page_arrow_icon"
+        android:drawableEnd="@drawable/next_page_arrow_icon"
+        android:drawablePadding="15dp"
+        android:background="@android:color/transparent"
+        style="@style/HugeText.Button"
+        app:fontFamily="@font/dancing_script"
+        android:text="@string/swipe_next"
+        android:onClick="OnClickNextButton"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>
